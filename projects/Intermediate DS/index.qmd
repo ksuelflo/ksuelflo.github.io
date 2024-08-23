@@ -1,0 +1,14 @@
+---
+title: "Solar and Wind Energy in the US"
+description: "Visualizing the Solar and Wind Energy Potential in the United States"
+image: wind.gif
+image-alt: Gif of windspeeds at varying altitudes.
+categories:
+  - Maps
+  - Visualization
+about:
+  template: solana
+  image: wind.gif
+---
+
+In this project, my partner and I's goal was to investigate the potential for solar and wind energy in the United States. We fit linear models to some summary measures of solar and wind use, to determine which states doing better or worse than they should have been. Additionally, I created some gifs of wind and solar potential in the US. The wind gif is shown above, where the altitude at which the wind speed is measured is changing. This was a fun challenge, working with mapping and animation packages in R to create a fascinating map. This project was for Intermediate Data Science.

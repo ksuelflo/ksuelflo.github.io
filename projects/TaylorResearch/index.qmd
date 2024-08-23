@@ -1,0 +1,17 @@
+---
+title: "Age Heaping in Sub-Saharan Africa"
+description: "Age Heaping in Probability Surveys in Low- and
+Middle-Income Countries: Frequency and Consequences for
+Mortality Estimation"
+image: heaping.png
+image-alt: Paper about Age Heaping
+categories:
+  - Demography
+  - Modeling
+  - Simulation Study
+about:
+  template: solana
+  image: heaping.png
+---
+
+This summer, I have been working with [Taylor Okonek](https://taylorokonek.github.io/) to investigate the impact that age heaping has on several different techniques that model under-five mortality rate. Age heaping refers to the artificial spike of deaths amongst children at 12 months, where there is a relatively large amount of deaths compared to surrounding ages. These deaths are recorded via surveys, as in many low and middle income countries, there is poor registration systems. We simulate children's deaths in order to control the amount of age heaping that occurs. This project has been very rewarding in many ways, helping me gain valuable skills using parallel programming and simulation techniques. Most of all, I hope that are work can be used to help make more accurate estimations of child mortality in low and middle income countries.

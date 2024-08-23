@@ -1,0 +1,26 @@
+---
+title: "Rail Baron Analysis"
+description: "Using Directed Graphs to Determine the Optimal Strategy in Rail Baron, a Board Game."
+image: RailBaronMap.jpeg
+image-alt: Image of the Game Board of Rail Baron.
+categories:
+  - Linear Algebra
+  - Board Games
+  - Graphs
+about:
+  template: solana
+  image: RailBaronMap.jpeg
+---
+<style>
+  .myclass {
+    max-width: 100%;
+    width: 600px;
+    height: 600px;
+    border: 10px solid rgba(200,0,0,.2);
+    margin: 0;
+  }
+</style>
+
+{{< pdf CLARailBaron.pdf class=myclass >}}
+
+The above image shows *Rail Baron*, a classic board game where the objective is to move from city to city as cheaply as possible. The easiest way to do this is to buy railroads, and utilize them for free. The image shows the optimal set of 6 railroads that build the best network. All the railroads are listed on the edge of the gameboard, along with their ranking of importance. We depicted the game board as a graph, where each node represents a different rail road. Nodes are connected if railroads connect to eachother. More information on our methodology can be found in our paper above, in sections 2 and 3. This project was for Computational Linear Algebra at Macalester College. 

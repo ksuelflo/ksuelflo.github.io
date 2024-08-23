@@ -1,0 +1,16 @@
+---
+title: "Blocks4All"
+description: "An Accessible Block Based Programming App"
+image: blocks4all_copy.png
+image-alt: Coding App
+categories:
+  - Research
+  - Computer Programming
+  - Accessibility
+  - Website
+about:
+  template: solana
+  image: blocks4all_copy.png
+---
+
+In the summer of 2023 I helped to continue to develop Blocks4All. Blocks4All is an accessible block based programming IPad app aimed at students who are in elementary school. It is designed to work well for students with motor and visual impairments, using Switch Control and Voice Over to aid in their learning. I worked on some app development as well as website development (linked [here](https://milnel2.github.io/blocks4alliOS/index.html)). We used Swift and UiKit to construct the app, and used HTML, CSS, and Javascript for the website. Learning all these languages was a fun and challenging process.

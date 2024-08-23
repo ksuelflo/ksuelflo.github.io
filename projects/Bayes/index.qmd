@@ -1,0 +1,157 @@
+---
+title: "Bayesian Spatial Statistics"
+description: "Using INLA and ICAR modeling to predict GDP"
+image: bayes.jpeg
+image-alt: Depiction of Bayesian Statistics.
+categories:
+  - Bayesian Statistics
+  - Modeling
+  - Maps
+  - Spatial Modeling
+about:
+  template: solana
+  image: bayes.jpeg
+---
+
+```{r setup, include=FALSE, warning=FALSE}
+
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.align = 'center')
+
+source('Cleaning.R')
+```
+
+## Introduction 
+
+In many statistical analyses, the assumption of independently and identically distributed (I.I.D) observations is a common starting point. However, this assumption may not always hold true, particularly in contexts where observations exhibit spatial correlation. For example, we might expect that production patterns look more similar for two households in Minnesota and Wisconsin than households in Minnesota and Virginia because Minnesota and Wisconsin have similar climates, and exogenous factors such as weather may impact the production process. In such scenarios, traditional statistical models may fail to capture the underlying spatial dependencies present in the data.
+
+To address this challenge, spatial models offer a solution by explicitly incorporating spatial relationships into the modeling framework. These models acknowledge that observations in nearby locations tend to be more similar to each other than those in distant locations. By accounting for spatial correlation, spatial models provide a more nuanced understanding of the data and can yield more accurate predictions and inferences.
+
+Bayesian statistical methods serve as a generally more intuitive and flexible alternative to the more standard frequentist methods. They account for prior knowledge, not just the available data, when generating predictions. This facilitates a refinement process as new data becomes available, allowing us to update our predictions using previous predictions and new data. This process also allows for a more intuitive interpretation of probabilities as the relative plausibility of an event occurs rather than the frequency at which it occurs.
+
+In our paper, we want to investigate the integration of Bayesian methods with spatial modeling techniques, focusing on Bayesian Conditional Autoregressive (CAR) [@schmidt2014conditional] models implemented using the CARBayes and INLA packages. We will demonstrate these methods using economic data from the western US and evaluate similarities and differences between methods.
+
+## Methodology
+
+### Background: Areal Data and Neighborhood Structure
+
+Areal data differs from point data, which consists of measurements from a known set of geospatial points. The boundary of areas can be considered polygons determined by a closed sequence of ordered coordinates connected by straight line segments. [@moraga2019geospatial]
+
+The essential idea is that the probability of values estimated at any given location is conditional on the level of neighboring values. We assume that nearby locations tend to have similar characteristics or behaviors. Therefore, we need to define the nearby locations.
+
+### Neighborhood Structure
+
+The most important component of spatial models is the neighborhood structure. What does it mean for a region to be considered a "neighbor" of another region? The most important part, and the reason why we include a neighborhood structure, is that "neighbors" are correlated with each other. The value of outcome variable $Y_i$ can be explained in part by the value of $Y$ amongst the neighbors of region $Y_i$. Most often, a Queen neighborhood structure is used. This means that if two regions touch at any point, they are considered neighbors. Without a large amount of data context, this is a fine assumption. We will utilize a Queen neighborhood structure in our analysis. Below, we examine the structure of $W$, which represents the neighborhood structure of our data.[@anselin2013spatial]
+
+For a set of $N$ areal units, the relationship between areal units is described by an $n \times n$ adjacency matrix $W$. The entries indicate whether two regions $n_i$ and $n_j$ are neighbors, with a value of 1 signifying adjacency and 0 indicating non-adjacency. It's worth noting that in models like Conditional Autoregressive (CAR) models, the neighbor relationship is symmetric, but a region is not considered its own neighbor ($W_{ii} = 0$).
+  
+```{r echo=FALSE, fig.width=3, fig.height= 4}
+# neighborhood structure
+centroids <- st_centroid(st_geometry(simple_data_A), of_largest_polygon=TRUE)
+W.nb <- poly2nb(simple_data_A, simple_data_A$grid_id) # using Queen
+nb_Q_net <- nb2lines(nb = W.nb, coords = centroids, as_sf = TRUE)
+
+simple_data_A %>%
+ggplot() + 
+  geom_sf(fill = 'white',color = 'darkgrey') + 
+  geom_sf(data = centroids) + 
+  geom_sf(data = nb_Q_net) + 
+  theme_classic()+
+  labs(caption = "Visualization of Neighbor Connections",
+       title ="Queen Neighborhood")+
+   theme(
+    plot.caption = element_text(color = "grey50") 
+  )
+
+```
+  
+
+
+###  Likelihood Function: A Gaussian Specification 
+
+Suppose we have aggregated continuous data $Y_1, Y_2, \ldots, Y_n$ at $n$ locations, and we expect that neighboring locations will have similar data With a *Gaussian likelihood*.
+
+The spatial variation in the response is modeled by a matrix of covariates $X$ and a spatial structure component $\phi$, the latter of which is included to model any spatial autocorrelation that remains in the data after the covariate effects have been accounted for. 
+
+$$
+\begin{split}
+Y_i &\sim \mathcal{N}(\mu_i, \nu^2) \\
+\text{where} \quad \mu_i &= X_i \beta + \phi_i \\
+\text{for} \quad i &= 1, \ldots, n 
+\end{split}
+$$
+
+Where
+
+ * $Y_i$ represents a random variable that follows a Gaussian distribution distributed with mean $\mu_i$ and variance $\nu^2$.
+ 
+ * $\beta$ is a p-length vector of coefficients
+ 
+ * $X_i$, is a $n \times p$  matrix of predictors (covariates) associated with the each of the areal units, the first column corresponds to an intercept term. $p$ refers to the number of coefficients. 
+ 
+ 
+ * $\phi$, an n-length vector $\phi = (\phi_1, ..., \phi_n)^T$, is the spatial random variables that can represent spatial interactions between $n_i$ and $n_j$.
+  
+
+
+
+### Instinct Conditional Autoregressive (ICAR) Priors For Spatial Random Effects
+
+The spatial structure component $\phi_i$ can be written as $\phi \sim \text{N}(0, \tau^2 Q(W)^{-1})$. This formulation captures the spatial autocorrelation structure of the data by incorporating the spatial precision matrix $Q$ and the variance parameter $\tau^2$. It assumes that the spatial random effects follow a multivariate Gaussian distribution with mean 0 and covariance matrix $\tau^2 Q(W)^{-1}$. The precision matrix $Q$ controls the spatial autocorrelation structure of the random effects, based on the non-negative symmetric adjacency matrix $W$.
+
+
+$$
+\begin{split}
+\phi &\sim \text{MVN}(0, \tau^2 Q(W)^{-1})
+\end{split}
+$$
+
+An Intrinsic Conditional Auto-Regressive (ICAR) model assumes a complete spatial correlation between regions. In the ICAR model, the precision matrix $Q(W)$ can be defined as:
+
+$$
+\begin{split}
+Q(W) &= D-\rho W\\
+\text{Where} \;\; \rho &=1 \;\; \text{in ICAR}
+\end{split}
+$$
+ 
+ Where
+ 
+ * $W$ is the $n \times n$ adjacency matrix where entries $\{i,i\}$ are zero and the off-diagonal elements are 1 if regions $i$ and $j$ are neighbors and 0.
+
+ * $D$ is the $n \times n$ diagonal matrix where entries $\{i,i\}$ are the number of neighbors of region $i$ and the off-diagonal entries are 0.
+ 
+ * The parameter $\rho$ controls the strength of spatial autocorrelation. Based on the assumption of the complete spatial correlation between regions, it is 1 in ICAR.
+
+In the context of ICAR, the matrix $Q$ is singular, meaning it cannot be used directly to model the data in a Frequentist approach. However, it can be used as a prior within a hierarchical Bayesian model by imposing a constraint that ensures the sum of each row equals zero.
+
+The corresponding conditional distribution specification for $\phi$ is:
+
+$$
+\begin{split}
+\phi_i|\phi_{-i}, W, \tau^2, \rho &\sim \mathcal{N}\left(\frac{\rho\sum_{j=1}^n w_{ij} \phi_j}{\rho\sum_{j=1}^n w_{ij} + 1 - \rho}, \frac{\tau^2}{\rho\sum_{j=1}^n w_{ij} + 1 - \rho}\right) \\  
+\text{Where} \; \rho &= 1 \; \; \text{in ICAR}
+\end{split}
+$$
+
+The conditional expectation is calculated as the average of the random effects in neighboring areas, while the conditional variance is inversely proportional to the number of neighbors. This approach is suitable because when random effects exhibit strong spatial autocorrelation, areas with more neighbors benefit from increased information about their random effect values from neighboring areas. Consequently, this increased information reduces uncertainty [@CARBayespackage]. 
+
+
+
+
+### Complete Bayesian Model
+
+$$
+\begin{split}
+\text{Likelihood} \;\; Y_i &\sim \mathcal{N}(\mu_i , \nu^2) \quad  \text{where } \;\; \mu_i = X_i \beta + \phi_i \\
+\text{Prior} \;\; \beta &\sim \mathcal{N}(\mu_\beta, \Sigma_\beta) \\
+\phi_i|\phi_{-i}, W, \tau^2, &\sim \mathcal{N}\left(\frac{\sum_{j=1}^n w_{ij} \phi_j}{\sum_{j=1}^n w_{ij}}, \frac{\tau^2}{\sum_{j=1}^n w_{ij} \phi_j}\right) \\
+\nu^2 &\sim \text{Inverse-Gamma}(1, 0.01) \\
+\tau^2 &\sim \text{Inverse-Gamma}(1, 0.01) \\
+\end{split}
+$$

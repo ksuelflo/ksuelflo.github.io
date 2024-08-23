@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kyle Suelflow",
+    "section": "",
+    "text": "he/him/his\nJunior at Macalester College\n\n\nStudent Researcher Summer 2023 | Macalester College\nStudent Research Summe 2024 | Macalester College\nPreceptor (Teacher Assistant) Sep 2023 - present | Macalester College\nCoding Class Instructor Sep 2023 - Feb 2024 | Capitol Hill Magnet School\n\n\n\nMacalester College | St. Paul MN  B.A. in Data Science | Sept 2022 - May 2026"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Kyle Suelflow",
+    "section": "",
+    "text": "Student Researcher Summer 2023 | Macalester College\nStudent Research Summe 2024 | Macalester College\nPreceptor (Teacher Assistant) Sep 2023 - present | Macalester College\nCoding Class Instructor Sep 2023 - Feb 2024 | Capitol Hill Magnet School"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Kyle Suelflow",
+    "section": "",
+    "text": "Macalester College | St. Paul MN  B.A. in Data Science | Sept 2022 - May 2026"
+  },
+  {
+    "objectID": "index.html#biography",
+    "href": "index.html#biography",
+    "title": "Kyle Suelflow",
+    "section": "Biography",
+    "text": "Biography\nMy name is Kyle Suelflow, and I am a Junior at Macalester College majoring in Data Science. I am excited to continue to build on my Data Science skills this year. I have been especially keen to learn more about spatial analysis, and spatial visualizations, and am currently working on a project analyzing solar and wind projects in the United States."
+  },
+  {
+    "objectID": "index.html#personal",
+    "href": "index.html#personal",
+    "title": "Kyle Suelflow",
+    "section": "Personal",
+    "text": "Personal\nI love to go hiking and backpacking, having taken a trip to Glacier National Park and Mount Assiniboine Provincial Park this past summer. I am the President of our Open Ultimate frisbee team at Mac, and play my fair share of pickup basketball too. This coming year, I hope to improve upon my spatial modeling and mapping skills, and am taking Geospatial Analysis, which I am super pumped about. In addition to playing ultimate frisbee at Macalester, I also play for a club team called Drag’n Thrust. We are hoping to win nationals this year which is exciting. I enjoy cooking, and hope to expand my food horizons this year. And of course, I can’t forget about Sudoku!"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTime Series Solar Analysis\n\n\n\nTime Series\n\n\nR\n\n\nSolar\n\n\n\nA Time Series Approach to Analyzing Historical Trends in Global Horizontal Irradiance\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSolar and Wind Energy in the US\n\n\n\nMaps\n\n\nVisualization\n\n\n\nVisualizing the Solar and Wind Energy Potential in the United States\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRail Baron Analysis\n\n\n\nLinear Algebra\n\n\nBoard Games\n\n\nGraphs\n\n\n\nUsing Directed Graphs to Determine the Optimal Strategy in Rail Baron, a Board Game.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlocks4All\n\n\n\nResearch\n\n\nComputer Programming\n\n\nAccessibility\n\n\nWebsite\n\n\n\nAn Accessible Block Based Programming App\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian Spatial Statistics\n\n\n\nBayesian Statistics\n\n\nModeling\n\n\nMaps\n\n\nSpatial Modeling\n\n\n\nUsing INLA and ICAR modeling to predict GDP\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAge Heaping in Sub-Saharan Africa\n\n\n\nDemography\n\n\nModeling\n\n\nSimulation Study\n\n\n\nAge Heaping in Probability Surveys in Low- and Middle-Income Countries: Frequency and Consequences for Mortality Estimation\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/Research/index.html",
+    "href": "projects/Research/index.html",
+    "title": "Blocks4All",
+    "section": "",
+    "text": "In the summer of 2023 I helped to continue to develop Blocks4All. Blocks4All is an accessible block based programming IPad app aimed at students who are in elementary school. It is designed to work well for students with motor and visual impairments, using Switch Control and Voice Over to aid in their learning. I worked on some app development as well as website development (linked here). We used Swift and UiKit to construct the app, and used HTML, CSS, and Javascript for the website. Learning all these languages was a fun and challenging process."
+  },
+  {
+    "objectID": "projects/Correlated/index.html",
+    "href": "projects/Correlated/index.html",
+    "title": "Time Series Solar Analysis",
+    "section": "",
+    "text": "Unable to display PDF file. Download instead.\nIn this capstone project from STAT 452, Correlated Data, my partner and I modeled global horizontal irradiance, or GHI, in 3 different locations around the world. These are Seychelles, Kenya, and England. Kenya and Seychelles are at similar latitudes but different climates, and Manchester, England is significantly more northern, providing a completely different set of data. We used modeling techniques from both time series and longitudinal to model GHI across 25 years of data. Specifically, we modeled intra-day variation and seasonal variation."
+  },
+  {
+    "objectID": "projects/Correlated/index.html#embed-from-url-only",
+    "href": "projects/Correlated/index.html#embed-from-url-only",
+    "title": "Time Series Solar Analysis",
+    "section": "",
+    "text": "{{&lt; pdf dummy.pdf &gt;}}\nUnable to display PDF file. Download instead."
+  },
+  {
+    "objectID": "projects/Correlated/index.html#embed-with-width-in-pixels",
+    "href": "projects/Correlated/index.html#embed-with-width-in-pixels",
+    "title": "Time Series Solar Analysis",
+    "section": "Embed with width in pixels",
+    "text": "Embed with width in pixels\n{{&lt; pdf dummy.pdf width=600 &gt;}}\nUnable to display PDF file. Download instead."
+  },
+  {
+    "objectID": "projects/Correlated/index.html#embed-with-width-in-percent",
+    "href": "projects/Correlated/index.html#embed-with-width-in-percent",
+    "title": "Time Series Solar Analysis",
+    "section": "Embed with width in percent",
+    "text": "Embed with width in percent\n{{&lt; pdf dummy.pdf width=100% &gt;}}\nUnable to display PDF file. Download instead."
+  },
+  {
+    "objectID": "projects/Correlated/index.html#embed-with-height-in-pixels",
+    "href": "projects/Correlated/index.html#embed-with-height-in-pixels",
+    "title": "Time Series Solar Analysis",
+    "section": "Embed with height in pixels",
+    "text": "Embed with height in pixels\n{{&lt; pdf dummy.pdf height=600 &gt;}}\nUnable to display PDF file. Download instead."
+  },
+  {
+    "objectID": "projects/Correlated/index.html#embed-with-both-width-and-height",
+    "href": "projects/Correlated/index.html#embed-with-both-width-and-height",
+    "title": "Time Series Solar Analysis",
+    "section": "Embed with both width and height",
+    "text": "Embed with both width and height\n{{&lt; pdf dummy.pdf width=600 height=400 &gt;}}\nUnable to display PDF file. Download instead."
+  },
+  {
+    "objectID": "projects/Correlated/index.html#embed-with-1-px-border",
+    "href": "projects/Correlated/index.html#embed-with-1-px-border",
+    "title": "Time Series Solar Analysis",
+    "section": "Embed with 1 px border",
+    "text": "Embed with 1 px border\n{{&lt; pdf dummy.pdf border=1 &gt;}}\nUnable to display PDF file. Download instead."
+  },
+  {
+    "objectID": "projects/Correlated/index.html#embed-with-css-class",
+    "href": "projects/Correlated/index.html#embed-with-css-class",
+    "title": "Time Series Solar Analysis",
+    "section": "",
+    "text": "Unable to display PDF file. Download instead."
+  },
+  {
+    "objectID": "projects/Correlated/index.html#you-can-also-use-embedpdf-as-an-alias",
+    "href": "projects/Correlated/index.html#you-can-also-use-embedpdf-as-an-alias",
+    "title": "Time Series Solar Analysis",
+    "section": "You can also use embedpdf as an alias",
+    "text": "You can also use embedpdf as an alias\n{{&lt; embedpdf dummy.pdf &gt;}}\nUnable to display PDF file. Download instead."
+  },
+  {
+    "objectID": "tidytuesday.html",
+    "href": "tidytuesday.html",
+    "title": "Projects",
+    "section": "",
+    "text": "dsfas\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTime Series Solar Analysis\n\n\n\nTime Series\n\n\nR\n\n\nSolar\n\n\n\nA Time Series Approach to Analyzing Historical Trends in Global Horizontal Irradiance\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSolar and Wind Energy in the US\n\n\n\nMaps\n\n\nVisualization\n\n\n\nVisualizing the Solar and Wind Energy Potential in the United States\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRail Baron Analysis\n\n\n\nLinear Algebra\n\n\nBoard Games\n\n\nGraphs\n\n\n\nUsing Directed Graphs to Determine the Optimal Strategy in Rail Baron, a Board Game.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlocks4All\n\n\n\nResearch\n\n\nComputer Programming\n\n\nAccessibility\n\n\nWebsite\n\n\n\nAn Accessible Block Based Programming App\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian Spatial Statistics\n\n\n\nBayesian Statistics\n\n\nModeling\n\n\nMaps\n\n\nSpatial Modeling\n\n\n\nUsing INLA and ICAR modeling to predict GDP\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAge Heaping in Sub-Saharan Africa\n\n\n\nDemography\n\n\nModeling\n\n\nSimulation Study\n\n\n\nAge Heaping in Probability Surveys in Low- and Middle-Income Countries: Frequency and Consequences for Mortality Estimation\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/RailBaron/index.html",
+    "href": "projects/RailBaron/index.html",
+    "title": "Rail Baron Analysis",
+    "section": "",
+    "text": "Unable to display PDF file. Download instead.\nIn this capstone project from STAT 452, Correlated Data, my partner and I modeled global horizontal irradiance, or GHI, in 3 different locations around the world. These are Seychelles, Kenya, and England. Kenya and Seychelles are at similar latitudes but different climates, and Manchester, England is significantly more northern, providing a completely different set of data. We used modeling techniques from both time series and longitudinal to model GHI across 25 years of data. Specifically, we modeled intra-day variation and seasonal variation."
+  },
+  {
+    "objectID": "projects/Intermediate DS/index.html",
+    "href": "projects/Intermediate DS/index.html",
+    "title": "Solar and Wind Energy in the US",
+    "section": "",
+    "text": "In this project, my partner and I’s goal was to investigate the potential for solar and wind energy in the United States. We fit linear models to some summary measures of solar and wind use, to determine which states doing better or worse than they should have been. Additionally, I created some gifs of wind and solar potential in the US. The wind gif is shown above, where the altitude at which the wind speed is measured is changing. This was a fun challenge, working with mapping and animation packages in R to create a fascinating map. This project was for Intermediate Data Science."
+  }
+]

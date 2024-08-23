@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kyle Suelflow",
+    "section": "",
+    "text": "he/him/his\nSophomore at Macalester College\n\n\nStudent Researcher Summer 2023 | Macalester College\nPreceptor (Teacher Assistant) Sep 2023 - present | Macalester College\nCoding Class Instructor Sep 2023 - present | Capitol Hill Magnet School\n\n\n\nMacalester College | St. Paul MN  B.A. in Data Science | Sept 2022 - May 2026\n##Biography\nMy name is Kyle Suelflow, and I am a Sophomore at Macalester College majoring in Data Science. I am excited to continue to build on my Data Science skills this year. I have been especially keen to learn more about spatial analysis, and spatial visualizations, and am currently working on a project analyzing solar and wind projects in the United States.\n##Personal\nI love to go hiking and backpacking, having taken a trip to Glacier National Park and Mount Assiniboine Provincial Park this past summer. I am a captain of our Open Ultimate frisbee team at Mac, and play my fair share of pickup basketball too. I also am teaching a coding class at a local elementary school this year, which has been both challenging and rewarding. It is much different than precepting! Cooking and playing board games are both important to me as well."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Kyle Suelflow",
+    "section": "",
+    "text": "Macalester College | St. Paul MN  B.A. in Data Science | Sept 2022 - May 2026"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Kyle Suelflow",
+    "section": "",
+    "text": "Student Researcher Summer 2023 | Macalester College\nPreceptor (Teacher Assistant) Sep 2023 - present | Macalester College\nCoding Class Instructor Sep 2023 - present | Capitol Hill Magnet School"
+  }
+]

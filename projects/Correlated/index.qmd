@@ -1,0 +1,26 @@
+---
+title: "Time Series Solar Analysis"
+description: "A Time Series Approach to Analyzing Historical Trends in Global Horizontal Irradiance"
+image: Manchester.png
+image-alt: Plot of GHI data by Month Manchester England
+categories:
+  - Time Series
+  - R
+  - Solar
+about:
+  template: solana
+  image: Manchester.png
+---
+<style>
+  .myclass {
+    max-width: 100%;
+    width: 600px;
+    height: 600px;
+    border: 10px solid rgba(200,0,0,.2);
+    margin: 0;
+  }
+</style>
+
+{{< pdf dummy.pdf class=myclass >}}
+
+In this capstone project from STAT 452, Correlated Data, my partner and I modeled global horizontal irradiance, or GHI, in 3 different locations around the world. These are Seychelles, Kenya, and England. Kenya and Seychelles are at similar latitudes but different climates, and Manchester, England is significantly more northern, providing a completely different set of data. We used modeling techniques from both time series and longitudinal to model GHI across 25 years of data. Specifically, we modeled intra-day variation and seasonal variation. 

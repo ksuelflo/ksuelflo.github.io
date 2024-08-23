@@ -1,0 +1,24 @@
+[
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/Correlated/index.html",
+      "/projects/Intermediate DS/index.html",
+      "/projects/RailBaron/index.html",
+      "/projects/Research/index.html",
+      "/projects/Bayes/index.html",
+      "/projects/TaylorResearch/index.html"
+    ]
+  },
+  {
+    "listing": "/tidytuesday.html",
+    "items": [
+      "/projects/Correlated/index.html",
+      "/projects/Intermediate DS/index.html",
+      "/projects/RailBaron/index.html",
+      "/projects/Research/index.html",
+      "/projects/Bayes/index.html",
+      "/projects/TaylorResearch/index.html"
+    ]
+  }
+]

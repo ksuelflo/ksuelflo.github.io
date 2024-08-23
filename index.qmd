@@ -1,0 +1,47 @@
+---
+title: "Kyle Suelflow"
+about:
+  id: intro-heading
+  template: trestles
+  image: images/profilepic2.jpeg
+  links:
+    - icon: github
+      href: https://github.com/ksuelflo
+    - icon: envelope
+      href: mailto:ksuelflo@macalester.edu
+---
+
+:::{#intro-heading}
+
+he/him/his
+
+Junior at Macalester College
+
+## Experience
+
+Student Researcher
+Summer 2023 | Macalester College
+
+Student Research 
+Summe 2024 | Macalester College
+
+Preceptor (Teacher Assistant)
+Sep 2023 - present | Macalester College
+
+Coding Class Instructor
+Sep 2023 - Feb 2024 | Capitol Hill Magnet School
+
+## Education
+
+Macalester College | St. Paul MN <br>
+B.A. in Data Science | Sept 2022 - May 2026
+
+:::
+
+## Biography
+
+My name is Kyle Suelflow, and I am a Junior at Macalester College majoring in Data Science. I am excited to continue to build on my Data Science skills this year. I have been especially keen to learn more about spatial analysis, and spatial visualizations, and am currently working on a project analyzing solar and wind projects in the United States. 
+
+## Personal
+
+I love to go hiking and backpacking, having taken a trip to Glacier National Park and Mount Assiniboine Provincial Park this past summer. I am the President of our Open Ultimate frisbee team at Mac, and play my fair share of pickup basketball too. This coming year, I hope to improve upon my spatial modeling and mapping skills, and am taking Geospatial Analysis, which I am super pumped about. In addition to playing ultimate frisbee at Macalester, I also play for a club team called Drag'n Thrust. We are hoping to win nationals this year which is exciting. I enjoy cooking, and hope to expand my food horizons this year. And of course, I can't forget about Sudoku!
