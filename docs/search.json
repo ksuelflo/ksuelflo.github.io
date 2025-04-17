@@ -2,35 +2,35 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Kyle Suelflow",
+    "title": "Kyle",
     "section": "",
     "text": "he/him/his\nJunior at Macalester College\n\n\nStudent Researcher Summer 2023 | Macalester College\nStudent Research Summe 2024 | Macalester College\nPreceptor (Teacher Assistant) Sep 2023 - present | Macalester College\nCoding Class Instructor Sep 2023 - Feb 2024 | Capitol Hill Magnet School\n\n\n\nMacalester College | St. Paul MN  B.A. in Data Science | Sept 2022 - May 2026"
   },
   {
     "objectID": "index.html#experience",
     "href": "index.html#experience",
-    "title": "Kyle Suelflow",
+    "title": "Kyle",
     "section": "",
     "text": "Student Researcher Summer 2023 | Macalester College\nStudent Research Summe 2024 | Macalester College\nPreceptor (Teacher Assistant) Sep 2023 - present | Macalester College\nCoding Class Instructor Sep 2023 - Feb 2024 | Capitol Hill Magnet School"
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
-    "title": "Kyle Suelflow",
+    "title": "Kyle",
     "section": "",
     "text": "Macalester College | St. Paul MN  B.A. in Data Science | Sept 2022 - May 2026"
   },
   {
     "objectID": "index.html#biography",
     "href": "index.html#biography",
-    "title": "Kyle Suelflow",
+    "title": "Kyle",
     "section": "Biography",
     "text": "Biography\nMy name is Kyle Suelflow, and I am a Junior at Macalester College majoring in Data Science. I am excited to continue to build on my Data Science skills this year. I have been especially keen to learn more about spatial analysis, and spatial visualizations, and am currently working on a project analyzing solar and wind projects in the United States."
   },
   {
     "objectID": "index.html#personal",
     "href": "index.html#personal",
-    "title": "Kyle Suelflow",
+    "title": "Kyle",
     "section": "Personal",
     "text": "Personal\nI love to go hiking and backpacking, having taken a trip to Glacier National Park and Mount Assiniboine Provincial Park this past summer. I am the President of our Open Ultimate frisbee team at Mac, and play my fair share of pickup basketball too. This coming year, I hope to improve upon my spatial modeling and mapping skills, and am taking Geospatial Analysis, which I am super pumped about. In addition to playing ultimate frisbee at Macalester, I also play for a club team called Drag’n Thrust. We are hoping to win nationals this year which is exciting. I enjoy cooking, and hope to expand my food horizons this year. And of course, I can’t forget about Sudoku!"
   },
@@ -131,5 +131,12 @@
     "title": "Solar and Wind Energy in the US",
     "section": "",
     "text": "In this project, my partner and I’s goal was to investigate the potential for solar and wind energy in the United States. We fit linear models to some summary measures of solar and wind use, to determine which states doing better or worse than they should have been. Additionally, I created some gifs of wind and solar potential in the US. The wind gif is shown above, where the altitude at which the wind speed is measured is changing. This was a fun challenge, working with mapping and animation packages in R to create a fascinating map. This project was for Intermediate Data Science."
+  },
+  {
+    "objectID": "index.html#tableau-workshop",
+    "href": "index.html#tableau-workshop",
+    "title": "Kyle",
+    "section": "Tableau Workshop!",
+    "text": "Tableau Workshop!\nlink to materials"
   }
 ]

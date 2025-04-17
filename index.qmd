@@ -1,5 +1,5 @@
 ---
-title: "Kyle Suelflow"
+title: "Kyle"
 about:
   id: intro-heading
   template: trestles
@@ -37,6 +37,10 @@ Macalester College | St. Paul MN <br>
 B.A. in Data Science | Sept 2022 - May 2026
 
 :::
+
+## Tableau Workshop!
+
+[link to materials](https://docs.google.com/document/d/12vQ3WaHucai9TmyPWoYPsnYp4JORwpjmAsnm-klpDJE/edit?tab=t.0)
 
 ## Biography
 
