@@ -10,8 +10,6 @@ website:
         text: Home
       - href: projects.qmd
         text: Projects
-      - href: tidytuesday.qmd
-        text: Tidy Tuesday
   page-footer:
     left: |
       &copy; Kyle Suelflow, 2023<br>
