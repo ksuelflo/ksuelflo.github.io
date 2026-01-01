@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Using Directed Graphs to Determine the Optimal Strategy in Rail Baron, a Board Game.">
+<meta name="description" content="Using INLA and ICAR modeling to predict GDP">
 
-<title>Rail Baron Analysis – Kyle Suelflow</title>
+<title>Bayesian Spatial Statistics – Kyle Suelflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,6 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -71,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -111,49 +112,48 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
-<div class="quarto-about-solana column-body">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rail Baron Analysis</h1>
+<h1 class="title">Bayesian Spatial Statistics</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Linear Algebra</div>
-    <div class="quarto-category">Board Games</div>
-    <div class="quarto-category">Graphs</div>
+    <div class="quarto-category">Bayesian Statistics</div>
+    <div class="quarto-category">Modeling</div>
+    <div class="quarto-category">Maps</div>
+    <div class="quarto-category">Spatial Modeling</div>
   </div>
   </div>
+
 <div>
   <div class="description">
-    Using Directed Graphs to Determine the Optimal Strategy in Rail Baron, a Board Game.
+    Using INLA and ICAR modeling to predict GDP
   </div>
 </div>
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header> 
-      <div class="about-contents"><main class="content" id="quarto-document-content">
-<style>
-  .myclass {
-    max-width: 100%;
-    width: 600px;
-    height: 600px;
-    border: 10px solid rgba(200,0,0,.2);
-    margin: 0;
-  }
-</style>
-<p><object data="CLARailBaron.pdf" type="application/pdf" class="myclass"><p>Unable to display PDF file. <a href="CLARailBaron.pdf">Download</a> instead.</p></object></p>
-<p>The above image shows <em>Rail Baron</em>, a classic board game where the objective is to move from city to city as cheaply as possible. The easiest way to do this is to buy railroads, and utilize them for free. The image shows the optimal set of 6 railroads that build the best network. All the railroads are listed on the edge of the gameboard, along with their ranking of importance. We depicted the game board as a graph, where each node represents a different rail road. Nodes are connected if railroads connect to eachother. More information on our methodology can be found in our paper above, in sections 2 and 3. This project was for Computational Linear Algebra at Macalester College.</p>
+  
 
 
-</main></div>
-    </div>
-    <img src="RailBaronMap.jpeg" alt="Image of the Game Board of Rail Baron." class="about-image
-  rounded " style="width: 15em;">
-  </div>
-</div>
- <!-- /main -->
+</header>
+
+
+<iframe src="final-report.html" width="100%" height="900" style="border:none;">
+</iframe>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -174,6 +174,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

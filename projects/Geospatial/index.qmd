@@ -1,0 +1,25 @@
+---
+title: "Estimating Western Montana Snowfall"
+description: "Using Empirical Bayesian Kriging (EBK) to estimate snowfall throughout Western Montana"
+image: montana.png
+image-alt: Image of the estimated snow totals in western montana in both 2010 and 2020
+categories:
+  - GIS
+  - Interpolation
+  - Maps
+about:
+  template: solana
+  image: montana.png
+---
+
+<style>
+  .myclass {
+    max-width: 100%;
+    width: 600px;
+    height: 600px;
+    border: 10px solid rgba(200,0,0,.2);
+    margin: 0;
+  }
+</style>
+
+{{< pdf final_gis.pdf class=myclass >}}
