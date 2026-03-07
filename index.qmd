@@ -9,6 +9,9 @@ about:
       href: https://github.com/ksuelflo
     - icon: envelope
       href: mailto:ksuelflo@macalester.edu
+    - icon: file-earmark-text
+      text: Resume
+      href: resume.pdf
 ---
 
 :::{#intro-heading}

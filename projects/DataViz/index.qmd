@@ -1,7 +1,7 @@
 ---
 title: "NBA Shot Explorer"
 description: "Interactive NBA shot charts ([link to website here](https://ksuelflo.github.io/NBA-Interactive-Viz/index.html))"
-image: shotchart.png
+image: NBAWebsite.png
 image-alt: NBA shot chart
 categories:
   - Data Visualization
@@ -9,7 +9,7 @@ categories:
   - Spatial Modeling
 ---
 
-<img src="NBA_website.png"
+<img src="NBAWebsite.png"
         width="100%"
         height="100%">
 <img>

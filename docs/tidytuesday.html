@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kyle – Kyle Suelflow</title>
+<title>Projects – Kyle Suelflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,11 +30,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -67,7 +70,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -75,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -92,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -107,84 +168,315 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Projects</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#biography" id="toc-biography" class="nav-link active" data-scroll-target="#biography">Biography</a></li>
-  <li><a href="#personal" id="toc-personal" class="nav-link" data-scroll-target="#personal">Personal</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="QWNjZXNzaWJpbGl0eQ==">Accessibility <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QmF5ZXNpYW4lMjBTdGF0aXN0aWNz">Bayesian Statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Qm9hcmQlMjBHYW1lcw==">Board Games <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tcHV0ZXIlMjBQcm9ncmFtbWluZw==">Computer Programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGF0YSUyMFZpc3VhbGl6YXRpb24=">Data Visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGVtb2dyYXBoeQ==">Demography <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R0lT">GIS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R3JhcGhz">Graphs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW50ZXJwb2xhdGlvbg==">Interpolation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGluZWFyJTIwQWxnZWJyYQ==">Linear Algebra <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFwcw==">Maps <span class="quarto-category-count">(4)</span></div><div class="category" data-category="TW9kZWxpbmc=">Modeling <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVzZWFyY2g=">Research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2ltdWxhdGlvbiUyMFN0dWR5">Simulation Study <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29sYXI=">Solar <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3BhdGlhbCUyME1vZGVsaW5n">Spatial Modeling <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VGltZSUyMFNlcmllcw==">Time Series <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VmlzdWFsaXphdGlvbg==">Visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="V2Vic2l0ZQ==">Website <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="images/KyleHeadshot.jpeg" class="about-image
-  rounded " style="width: 20em;">
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Kyle</h1>
-</div>
-<div class="quarto-title-meta">
+
+<p>dsfas</p>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
   </div>
-</header>
-    <div class="about-links">
-  <a href="https://github.com/ksuelflo" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text"></span>
-  </a>
-  <a href="mailto:ksuelflo@macalester.edu" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text"></span>
-  </a>
-  <a href="/resume.pdf" class="about-link" rel="" target="">
-    <i class="bi bi-file-earmark-text"></i>
-     <span class="about-link-text">Resume</span>
-  </a>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-  </div>
-  <div class="about-contents"><div id="intro-heading">
-<p>he/him/his</p>
-<p>Senior at Macalester College</p>
-<section id="experience" class="level2">
-<h2 data-anchor-id="experience">Experience</h2>
-<p>Preceptor (Teacher Assistant) Sep 2023 - Present | Macalester College</p>
-<p>Data Science Intern June 2025 - Aug 2025 | Aon Inc.</p>
-<p>Student Researcher Summer 2024 | Macalester College</p>
-<p>Coding Class Instructor Sep 2023 - Feb 2024 | Capitol Hill Magnet School</p>
-<p>Student Researcher Summer 2023 | Macalester College</p>
-</section>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<p>Macalester College | St.&nbsp;Paul MN <br> Data Science major, Environmental Studies minor | Sept 2022 - May 2026</p>
-</section>
-</div></div>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="VGltZSUyMFNlcmllcyUyQ1IlMkNTb2xhcg==" data-listing-file-modified-sort="1705794929522" data-listing-reading-time-sort="1" data-listing-word-count-sort="119">
+<a href="./projects/Correlated/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/Correlated/Manchester.png" class="thumbnail-image card-img" style="height: 150px;" alt="Plot of GHI data by Month Manchester England">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Time Series Solar Analysis
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('VGltZSUyMFNlcmllcw=='); return false;">Time Series</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U29sYXI='); return false;">Solar</div>
+
 </div>
+<div class="card-text listing-description delink">
+<p>A Time Series Approach to Analyzing Historical Trends in Global Horizontal Irradiance</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
-<section id="biography" class="level2">
-<h2 data-anchor-id="biography">Biography</h2>
-<p>My name is Kyle Suelflow, and I am a Senior at Macalester College majoring in Data Science with a minor in Environmental Studies. My core interest lies in data visualization. To be able to tell a story using data requires understanding of how viewers perceive color, shape, and size. The challenge of figuring out how to show data in an elegant yet understandable way is one that I enjoy tackling. I wish to utilize my skills in data visualization and analysis in data journalism, climate modeling, and sports analytics.</p>
-</section>
-<section id="personal" class="level2">
-<h2 data-anchor-id="personal">Personal</h2>
-<p>I love to go hiking and backpacking, having taken trips to Banff national park and Acadia national park this past summer. At Macalester College, I am the President of the Open Ultimate frisbee team, which takes up a lot of my time. Additionally, I play both club and professional ultimate frisbee in Minnesota, and this summer I competed with the U-24 USA mixed national team in Spain at the world championships! Outside of frisbee, I enjoy cooking and playing games. You can find me scrolling NYT cooking for ideas often. Some board games I like to play include Terraforming Mars, Settlers of Catan, and Rail Baron.</p>
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="TWFwcyUyQ1Zpc3VhbGl6YXRpb24=" data-listing-file-modified-sort="1767309185555" data-listing-reading-time-sort="1" data-listing-word-count-sort="121">
+<a href="./projects/Intermediate DS/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/Intermediate DS/wind.gif" class="thumbnail-image card-img" style="height: 150px;" alt="Gif of windspeeds at varying altitudes.">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Solar and Wind Energy in the US
+</h5>
+<div class="listing-categories">
 
+<div class="listing-category" onclick="window.quartoListingCategory('TWFwcw=='); return false;">Maps</div>
 
+<div class="listing-category" onclick="window.quartoListingCategory('VmlzdWFsaXphdGlvbg=='); return false;">Visualization</div>
 
-</section>
+</div>
+<div class="card-text listing-description delink">
+<p>Visualizing the Solar and Wind Energy Potential in the United States</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
-</main> <!-- /main -->
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="TGluZWFyJTIwQWxnZWJyYSUyQ0JvYXJkJTIwR2FtZXMlMkNHcmFwaHM=" data-listing-file-modified-sort="1724383823537" data-listing-reading-time-sort="1" data-listing-word-count-sort="158">
+<a href="./projects/RailBaron/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/RailBaron/RailBaronMap.jpeg" class="thumbnail-image card-img" style="height: 150px;" alt="Image of the Game Board of Rail Baron.">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Rail Baron Analysis
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGluZWFyJTIwQWxnZWJyYQ=='); return false;">Linear Algebra</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Qm9hcmQlMjBHYW1lcw=='); return false;">Board Games</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('R3JhcGhz'); return false;">Graphs</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Using Directed Graphs to Determine the Optimal Strategy in Rail Baron, a Board Game.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="RGF0YSUyMFZpc3VhbGl6YXRpb24lMkNNYXBzJTJDU3BhdGlhbCUyME1vZGVsaW5n" data-listing-file-modified-sort="1772907680496" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
+<a href="./projects/DataViz/index.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="./projects/DataViz/index.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/DataViz/NBAWebsite.png" class="thumbnail-image card-img" style="height: 150px;" alt="NBA shot chart">
+</p>
+</a><div class="card-body post-contents"><a href="./projects/DataViz/index.html" class="quarto-grid-link">
+<h5 class="no-anchor card-title listing-title">
+NBA Shot Explorer
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMFZpc3VhbGl6YXRpb24='); return false;">Data Visualization</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFwcw=='); return false;">Maps</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3BhdGlhbCUyME1vZGVsaW5n'); return false;">Spatial Modeling</div>
+
+</div>
+</a><div class="card-text listing-description delink"><a href="./projects/DataViz/index.html" class="quarto-grid-link">
+</a><p><a href="./projects/DataViz/index.html" class="quarto-grid-link">Interactive NBA shot charts (</a><a href="https://ksuelflo.github.io/NBA-Interactive-Viz/index.html">link to website here</a>)</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="g-col-1" data-index="4" data-categories="R0lTJTJDSW50ZXJwb2xhdGlvbiUyQ01hcHM=" data-listing-file-modified-sort="1767306826818" data-listing-reading-time-sort="1" data-listing-word-count-sort="37">
+<a href="./projects/Geospatial/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/Geospatial/montana.png" class="thumbnail-image card-img" style="height: 150px;" alt="Image of the estimated snow totals in western montana in both 2010 and 2020">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Estimating Western Montana Snowfall
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('R0lT'); return false;">GIS</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJwb2xhdGlvbg=='); return false;">Interpolation</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFwcw=='); return false;">Maps</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Using Empirical Bayesian Kriging (EBK) to estimate snowfall throughout Western Montana</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="UmVzZWFyY2glMkNDb21wdXRlciUyMFByb2dyYW1taW5nJTJDQWNjZXNzaWJpbGl0eSUyQ1dlYnNpdGU=" data-listing-file-modified-sort="1705773546261" data-listing-reading-time-sort="1" data-listing-word-count-sort="94">
+<a href="./projects/Research/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/Research/blocks4all_copy.png" class="thumbnail-image card-img" style="height: 150px;" alt="Coding App">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Blocks4All
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UmVzZWFyY2g='); return false;">Research</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29tcHV0ZXIlMjBQcm9ncmFtbWluZw=='); return false;">Computer Programming</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QWNjZXNzaWJpbGl0eQ=='); return false;">Accessibility</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('V2Vic2l0ZQ=='); return false;">Website</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>An Accessible Block Based Programming App</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="QmF5ZXNpYW4lMjBTdGF0aXN0aWNzJTJDTW9kZWxpbmclMkNNYXBzJTJDU3BhdGlhbCUyME1vZGVsaW5n" data-listing-file-modified-sort="1767305368723" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
+<a href="./projects/Bayes/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/Bayes/bayes.jpeg" class="thumbnail-image card-img" style="height: 150px;" alt="Depiction of Bayesian Statistics.">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Bayesian Spatial Statistics
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmF5ZXNpYW4lMjBTdGF0aXN0aWNz'); return false;">Bayesian Statistics</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TW9kZWxpbmc='); return false;">Modeling</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFwcw=='); return false;">Maps</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3BhdGlhbCUyME1vZGVsaW5n'); return false;">Spatial Modeling</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Using INLA and ICAR modeling to predict GDP</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="RGVtb2dyYXBoeSUyQ01vZGVsaW5nJTJDU2ltdWxhdGlvbiUyMFN0dWR5" data-listing-file-modified-sort="1767309147519" data-listing-reading-time-sort="1" data-listing-word-count-sort="153">
+<a href="./projects/TaylorResearch/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/TaylorResearch/heapingplot.png" class="thumbnail-image card-img" style="height: 150px;" alt="Paper about Age Heaping">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Age Heaping in Sub-Saharan Africa
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGVtb2dyYXBoeQ=='); return false;">Demography</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TW9kZWxpbmc='); return false;">Modeling</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U2ltdWxhdGlvbiUyMFN0dWR5'); return false;">Simulation Study</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Age Heaping in Probability Surveys in Low- and Middle-Income Countries: Frequency and Consequences for Mortality Estimation</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
