@@ -1,10 +1,38 @@
 
-/* INTRO STYLING--------------------------------------------------------------------------- */
+/* THEME ---------------------------------------------------------------------------------- */
+
+:root {
+  --bg: #FAFAF8;
+  --surface: #FFFFFF;
+  --text: #1F2328;
+  --text-muted: #57606A;
+  --accent: #1F6B3A;
+  --accent-hover: #15502A;
+  --border: #E6E4DF;
+}
 
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #E5E5E5;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding-bottom: 60px;
+    -webkit-font-smoothing: antialiased;
 }
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* INTRO STYLING--------------------------------------------------------------------------- */
 
 .headshot {
   width: 200px;
@@ -19,8 +47,8 @@ body{
 .intro-text {
   margin-left: clamp(20px, 15vw, 350px);
   margin-right: clamp(20px, 15vw, 350px);
-  font-size: 20px;
-  min-width: 300px;
+  font-size: 19px;
+  line-height: 1.7;
 }
 
 .links {
@@ -28,15 +56,25 @@ body{
   margin-right: clamp(20px, 15vw, 350px);
 }
 
+.links {
+  display: flex;
+  gap: 18px;
+  margin-top: 8px;
+}
+
 .links i{
-    background-color: none;
-    color: black;
-    font-size: 20px;
-    padding-left:10px;
+    color: var(--text);
+    font-size: 22px;
+    transition: color 0.15s ease, transform 0.15s ease;
 }
 
 .links a {
   text-decoration: none;
+}
+
+.links a:hover i {
+  color: var(--accent);
+  transform: translateY(-2px);
 }
 
 
@@ -47,7 +85,13 @@ body{
 
 h2 {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 50px;
+    margin-bottom: 28px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .project img {
@@ -55,8 +99,8 @@ h2 {
   height: 243.7975px; /* pick a value that works for your layout */
   object-fit: cover;
   display: block;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .project .image-link {
@@ -80,8 +124,17 @@ h2 {
   min-height: 200px;
 }
 
+.project .title {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 18px 0 8px 0;
+}
+
 .description {
-  font-size:16px;
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-top: 0;
 }
 
 .tags {
@@ -92,11 +145,13 @@ h2 {
 }
 
 .tag {
-    border-radius:4px;
-    background-color:grey;
-    padding: 4px 10px;
-    color:white;
-    font-size:12px;
+    border-radius: 999px;
+    background-color: #6B7280;
+    padding: 4px 12px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
 }
 
 .tag[data-tag="R Statistics"]       { background-color: #2563EB; } /* blue */
@@ -108,7 +163,7 @@ h2 {
 .tag[data-tag="Dashboard"]          { background-color: #4338CA; } /* indigo */
 .tag[data-tag="Article"]            { background-color: #57534E; } /* warm charcoal grey */
 .tag[data-tag="Correlated Data"]    { background-color: #BE185D; } /* deep pink/magenta */
-.tag[data-tag="Environment"]        { background-color:   darkgreen;}
+.tag[data-tag="Environment"]        { background-color: var(--accent); }
 
 
 /* TESTIMONIAL STYLING--------------------------------------------------------------------------- */
@@ -124,18 +179,19 @@ h2 {
 .testimonial {
   margin: 0;
   padding: 56px 40px 32px 40px;
-  background-color: white;
-  border-left: 5px solid darkgreen;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
 .testimonial blockquote {
   margin: 0;
   font-size: 18px;
   font-style: italic;
-  line-height: 1.6;
-  color: #333;
+  line-height: 1.7;
+  color: var(--text);
 }
 
 .testimonial figcaption {
@@ -152,11 +208,7 @@ h2 {
 
 .testimonial-role {
   font-size: 14px;
-  color: #555;
-}
-
-.testimonial-role a {
-  color: darkgreen;
+  color: var(--text-muted);
 }
 
 @media (max-width: 600px) {
